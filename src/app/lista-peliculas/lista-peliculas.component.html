@@ -1,0 +1,7 @@
+<h2 class="titulo-lista">Listado de Peliculas</h2>
+<button (click)="botonMostrar()">mostrar peliculas</button>
+<ul *ngIf="mostrarDatos === true">
+  <li>Pelicula: {{pelicula.titulo}}</li>
+  <li>Director: {{pelicula.director}}</li>
+  <li>Anio: {{pelicula.anio}}</li>
+</ul>
