@@ -10,7 +10,12 @@ export class ListaPeliculasComponent {
   public mostrarDatos:boolean;
 
   constructor() {
-    this.pelicula = new Pelicula(1, "El caballero de la Noche", "Christopher Nolan", 2008 );
+    this.pelicula = new Pelicula(
+      1, 
+      "El caballero de la Noche", 
+      "Christopher Nolan", 
+      2008 );
+    
     this.anuncio();
     this.mostrarDatos = false;
   }
@@ -18,6 +23,6 @@ export class ListaPeliculasComponent {
     console.log(this.pelicula);
   }
   botonMostrar(){
-    this.mostrarDatos = true;
+    this.mostrarDatos = !this.mostrarDatos;
   }
 }
