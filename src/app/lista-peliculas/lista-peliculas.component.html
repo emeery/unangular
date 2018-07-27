@@ -6,33 +6,15 @@
   <li>Anio: {{pelicula.anio}}</li>
 </ul>
 
-<div class="flexible">
-  <div
-  class='flexible-item'
-  ><h2>1</h2></div>
-  <div
-  class='flexible-item'
-  ><h2>2</h2></div>
-</div>
+<p>
+  Cambiar titulo:
+<input type="text" [(ngModel)]="pelicula.titulo" />
+</p>
 
-<!-- <div class='padre'>
-<div class='hijo'><p>A</p></div>
-<div class='hijo'><p>B</p></div>
-</div> -->
-
-
-
-<div class="tablas">
-
-  <div class="tablas-item"></div>
-  <div class="tablas-item">- Un parrafo <br>
-    - Una solucion
-
-  </div>
-  <div class="tablas-item">- Una etiqueta <br>
-    - Un resultado
-  </div>
-  <div class="tablas-item"></div>
-</div>
+<p>nombre : {{nombre}}</p>
+<hr/>
+<ul *ngFor="let item of arreglo">
+    <li>Dj: {{item}}</li>
+</ul>
 
 

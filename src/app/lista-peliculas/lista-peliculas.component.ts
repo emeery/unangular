@@ -6,12 +6,12 @@ import { Pelicula} from '../modelo/pelicula';
   styleUrls: ['./playground-flex.css']
 })
 export class ListaPeliculasComponent {
-  public pelicula:Pelicula;
-  public mostrarDatos:boolean;
-
+  public pelicula: Pelicula;
+  public mostrarDatos: boolean;
+  public nombre = 'Gerardo';
+  public arreglo = ['rayel', 'buuren', 'eximinds'];
   constructor() {
-    this.pelicula = new Pelicula(1, "El caballero de la Noche", "Christopher Nolan", 2008 );
-
+    this.pelicula = new Pelicula(1, 'El caballero de la Noche', 'Christopher Nolan', 2008);
     this.anuncio();
     this.mostrarDatos = false;
   }
