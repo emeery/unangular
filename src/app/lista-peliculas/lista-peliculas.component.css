@@ -1,0 +1,14 @@
+.titulo-lista {
+  background-color:slateblue;
+  color: white;
+}
+
+.titulo-pelicula {
+  cursor: pointer;
+}
+.titulo-pelicula:hover {
+  text-decoration: underline;
+}
+.clicked {
+  font-size: 30px;
+}

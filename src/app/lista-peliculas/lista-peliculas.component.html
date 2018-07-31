@@ -1,9 +1,9 @@
 <h2 class="titulo-lista">Listado de Peliculas</h2>
 <button (click)="botonMostrar()">mostrar peliculas</button>
 <ul *ngIf="mostrarDatos === true">
-  <li>Pelicula: {{pelicula.titulo}}</li>
-  <li>Director: {{pelicula.director}}</li>
-  <li>Anio: {{pelicula.anio}}</li>
+    <li>Titulo: <strong>{{pelicula.titulo}}</strong></li>
+    <li>Director: <strong>{{pelicula.director}}</strong></li>
+    <li>Año: {{pelicula.anio}} </li>
 </ul>
 
 <p>
@@ -11,10 +11,20 @@
 <input type="text" [(ngModel)]="pelicula.titulo" />
 </p>
 
-<p>nombre : {{nombre}}</p>
 <hr/>
-<ul *ngFor="let item of arreglo">
-    <li>Dj: {{item}}</li>
+<h2>Listado de peliculas:</h2>
+<ul>
+  <ul *ngFor="let pelicula of peliculas">
+      <li
+      (click)="cambiarPelicula(pelicula)"
+      class="titulo-pelicula"
+      [class.clicked]="peliculaElegida.id === pelicula.id"
+      >Titulo: <strong>{{pelicula.titulo}}</strong></li>
+      <li>Director: <strong>{{pelicula.director}}</strong></li>
+      <li>Anio: <strong>{{pelicula.anio}}</strong></li>
+  </ul>
 </ul>
+
+
 
 
