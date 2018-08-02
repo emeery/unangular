@@ -5,9 +5,15 @@ style="text-align:center">
   <h1 >
      {{ titulo }}
   </h1>
-  <app-lista-peliculas>
 
-  </app-lista-peliculas>
+<nav>
+  <ul>
+    <li><a [routerLink]="['peliculas']">Inicio</a></li>
+    <li><a [routerLink]="['contacto']">Contacto</a></li>
+  </ul>
+</nav>
+<router-outlet></router-outlet>
+
 </div>
 
 

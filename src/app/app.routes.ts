@@ -5,13 +5,17 @@
 import { Routes, RouterModule } from '@angular/router';
 
 import { ListaPeliculasComponent } from './lista-peliculas/lista-peliculas.component';
-
+import { ContactoComponent} from './contacto/contacto.component';
 
 const routes: Routes = [
   {
     path: 'peliculas',
     component: ListaPeliculasComponent,
   },
+  {
+    path: 'contacto',
+    component: ContactoComponent,
+  }
 ];
 
 // - Updated Export
