@@ -1,10 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-
 import { AppComponent } from './app.component';
 import { ListaPeliculasComponent } from './lista-peliculas/lista-peliculas.component';
-
+import {routing} from './app.routes';
 
 @NgModule({
   declarations: [
@@ -13,7 +12,8 @@ import { ListaPeliculasComponent } from './lista-peliculas/lista-peliculas.compo
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    routing
   ],
   providers: [],
   bootstrap: [AppComponent]

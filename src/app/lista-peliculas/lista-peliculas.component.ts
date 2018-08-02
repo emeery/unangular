@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { Pelicula} from '../modelo/pelicula';
+import { Pelicula} from '../model/pelicula';
+import {PeliculasServicio} from '../services/peliculas.services';
 @Component({
   selector: 'app-lista-peliculas',
   templateUrl: './lista-peliculas.component.html',
+  providers: [PeliculasServicio],
   styleUrls: ['./lista-peliculas.component.css']
 })
 export class ListaPeliculasComponent {
@@ -10,25 +12,15 @@ export class ListaPeliculasComponent {
   public mostrarDatos: boolean;
   public peliculaElegida: Pelicula;
   public peliculas; // arreglo
-  constructor() {
+  constructor(private _peliculaServicio: PeliculasServicio) {
     this.mostrarDatos = false;
-    this.peliculaElegida = new Pelicula(
-      1, 'El caballero de la Noche', 'Christopher Nolan', 2008);
-    this.peliculas = [
-      new Pelicula(
-        1, 'El caballero de la Noche', 'Christopher Nolan', 2008),
-      new Pelicula(
-        2, 'El hotel Budapest', 'Wes Anderson', 2014 ),
-      new Pelicula(
-        3, 'El Señor de los Anillos', 'Peter Jackson', 2001),
-      new Pelicula(
-        4, 'El club de la pelea', 'David Fincher', 1999)
-    ];
+    this.peliculas = _peliculaServicio.getPeliculas();
+    this.peliculaElegida = this.peliculas[0];
     this.pelicula = this.peliculas[0];
     this.anuncio();
   }
   anuncio() {
-    console.log(this.pelicula);
+    console.log(this.peliculas[1] );
   }
   botonMostrar() {
     this.mostrarDatos = !this.mostrarDatos;

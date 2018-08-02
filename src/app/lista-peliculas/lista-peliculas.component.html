@@ -1,4 +1,5 @@
 <h2 class="titulo-lista">Listado de Peliculas</h2>
+<p> {{unServicio}} </p>
 <button (click)="botonMostrar()">mostrar peliculas</button>
 <ul *ngIf="mostrarDatos === true">
     <li>Titulo: <strong>{{pelicula.titulo}}</strong></li>
@@ -24,7 +25,3 @@
       <li>Anio: <strong>{{pelicula.anio}}</strong></li>
   </ul>
 </ul>
-
-
-
-
