@@ -6,13 +6,15 @@ import { ListaPeliculasComponent } from './lista-peliculas/lista-peliculas.compo
 import {routing} from './app.routes';
 import { FooterComponent } from './footer/footer.component';
 import { ContactoComponent } from './contacto/contacto.component';
+import { CrearPeliculaComponent } from './crear-pelicula/crear-pelicula.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ListaPeliculasComponent,
     FooterComponent,
-    ContactoComponent
+    ContactoComponent,
+    CrearPeliculaComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,13 @@
+<h3>Agrega una pelicula</h3>
+<p>Titulo: <input type="text" #titulo >
+</p>
+<p>Director: <input type="text" #director >
+</p>
+<p>Anio: <input type="text" #anio >
+</p>
+<button
+(click)='crearPelicula(
+  titulo.value, director.value, anio.value)'
+>agrega pelicula</button>
+
+

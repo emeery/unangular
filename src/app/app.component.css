@@ -1,1 +1,10 @@
-.cabecera > h1 {color: cadetblue; }
+.cabecera {background-color: lightblue;}
+.cabecera > h1 {color:lightseagreen; }
+nav ul {
+  display:flex;
+}
+nav li {
+  margin-right: 5%;
+  list-style-type: none;
+}
+

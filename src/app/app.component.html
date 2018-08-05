@@ -1,19 +1,20 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div
 class="cabecera"
-style="text-align:center">
-  <h1 >
-     {{ titulo }}
-  </h1>
-
+style="text-align:center"
+>
+<h1 > {{ titulo }} </h1>
+</div>
 <nav>
   <ul>
     <li><a [routerLink]="['peliculas']">Inicio</a></li>
+    <li><a [routerLink]="['agregarpelicula']">Nueva Pelicula</a></li>
     <li><a [routerLink]="['contacto']">Contacto</a></li>
+
   </ul>
 </nav>
 <router-outlet></router-outlet>
 
-</div>
+
 
 

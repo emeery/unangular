@@ -9,6 +9,10 @@
 .titulo-pelicula:hover {
   text-decoration: underline;
 }
+hr {
+  color: pink;
+}
 .clicked {
   font-size: 30px;
+  color: lightseagreen;
 }
