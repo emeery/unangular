@@ -19,9 +19,12 @@
       <li
       (click)="cambiarPelicula(pelicula)"
       class="titulo-pelicula"
-      [class.clicked]="peliculaElegida.id === pelicula.id"
+      [class.clicked]="peliculaElegida.titulo === pelicula.titulo"
       >Titulo: <strong>{{pelicula.titulo}}</strong></li>
       <li>Director: <strong>{{pelicula.director}}</strong></li>
       <li>Anio: <strong>{{pelicula.anio}}</strong></li>
+      <li><a [routerLink]="['agregarpelicula', {titulo: pelicula.titulo}]">modifica esta pelicula</a></li>
   </ul>
+
 </ul>
+<footer></footer>

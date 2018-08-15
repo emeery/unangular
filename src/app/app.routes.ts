@@ -1,5 +1,4 @@
 
-
 // - Routes instead of RouteConfig
 // - RouterModule instead of provideRoutes
 import { Routes, RouterModule } from '@angular/router';
@@ -7,10 +6,10 @@ import { Routes, RouterModule } from '@angular/router';
 import { ListaPeliculasComponent } from './lista-peliculas/lista-peliculas.component';
 import { ContactoComponent} from './contacto/contacto.component';
 import { CrearPeliculaComponent} from './crear-pelicula/crear-pelicula.component';
-
+import { PlaygroundComponent} from './playground/playground.component';
 const routes: Routes = [
   {
-    path: 'peliculas',
+    path: '',
     component: ListaPeliculasComponent,
     pathMatch: 'full',
   },
@@ -21,6 +20,14 @@ const routes: Routes = [
   {
     path: 'agregarpelicula',
     component: CrearPeliculaComponent,
+  },
+  {
+    path: 'agregarpelicula/:titulo',
+    component: CrearPeliculaComponent,
+  },
+  {
+    path: 'playground',
+    component: PlaygroundComponent,
   }
 ];
 
