@@ -3,7 +3,7 @@
 <ul *ngIf="mostrarDatos === true">
     <li>Titulo: <strong>{{pelicula.titulo}}</strong></li>
     <li>Director: <strong>{{pelicula.director}}</strong></li>
-    <li>Año: {{pelicula.anio}} </li>
+    <li>Año: {{pelicula.fecha}} </li>
 </ul>
 
 <p>
@@ -22,7 +22,7 @@
       [class.clicked]="peliculaElegida.titulo === pelicula.titulo"
       >Titulo: <strong>{{pelicula.titulo}}</strong></li>
       <li>Director: <strong>{{pelicula.director}}</strong></li>
-      <li>Anio: <strong>{{pelicula.anio}}</strong></li>
+      <li>Publicación: <strong>{{pelicula.fecha}}</strong></li>
       <li><a [routerLink]="['agregarpelicula', {titulo: pelicula.titulo}]">modifica esta pelicula</a></li>
   </ul>
 

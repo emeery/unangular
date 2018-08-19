@@ -28,7 +28,6 @@ export class ListaPeliculasComponent {
   cambiarPelicula(pelicula) {
     this.pelicula = pelicula;
     this.peliculaElegida = pelicula;
-
   }
 
 }
