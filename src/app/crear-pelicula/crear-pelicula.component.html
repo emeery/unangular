@@ -1,33 +1,35 @@
 <h3>Agrega una pelicula</h3>
-
-<form #unaForma="ngForm"
-(onSubmit)="unSubmit()">
-<p>Titulo:
-  <input
-  type="text"
-  name="titulo"
-  ngModel
-  #titulo="ngModel"
-  >
-</p>
-<p>Director:
-  <input
-  type="text"
-  name="titulo"
-  ngModel
-  #director="ngModel"
-  >
-</p>
-<p>Publicación:
-  <input
-  type="text"
-  name="titulo"
-  ngModel
-  #fecha="ngModel"
-  >
-</p>
-<button
-type="submit"
->agrega pelicula</button>
+<form #unaForma="ngForm" (ngSubmit)="unSubmit()">
+	<p>Titulo: 
+		<input 
+		type="text" 
+		#titulo="ngModel"
+		name="titulo"
+		[(ngModel)]="nuevaPelicula.titulo"
+		required 
+		>
+		
+	</p>
+	<span *ngIf="!titulo.valid">No valido</span>
+	<p>Director: 
+		<input 
+		type="text" 
+		#director="ngModel"
+		name="director"
+		[(ngModel)]="nuevaPelicula.director"
+		>
+	</p>
+	<p>Anio: 
+		<input 
+		type="text" 
+		#anio="ngModel"
+		name="anio"
+		[(ngModel)]="nuevaPelicula.anio"
+		>
+	</p>
+	<button
+	type="submit"
+	>agrega pelicula</button>
 </form>
+
 
