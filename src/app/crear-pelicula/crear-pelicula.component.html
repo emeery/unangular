@@ -1,35 +1,42 @@
 <h3>Agrega una pelicula</h3>
-<form #unaForma="ngForm" (ngSubmit)="unSubmit()">
-	<p>Titulo: 
-		<input 
-		type="text" 
-		#titulo="ngModel"
-		name="titulo"
-		[(ngModel)]="nuevaPelicula.titulo"
-		required 
-		>
-		
-	</p>
-	<span *ngIf="!titulo.valid">No valido</span>
-	<p>Director: 
-		<input 
-		type="text" 
-		#director="ngModel"
-		name="director"
-		[(ngModel)]="nuevaPelicula.director"
-		>
-	</p>
-	<p>Anio: 
-		<input 
-		type="text" 
-		#anio="ngModel"
-		name="anio"
-		[(ngModel)]="nuevaPelicula.anio"
-		>
-	</p>
-	<button
-	type="submit"
-	>agrega pelicula</button>
+<form #unaForma="ngForm" (ngSubmit)="unSubmit()" >
+<p>Titulo:
+<input
+type="text"
+#titulo="ngModel"
+name="titulo"
+[(ngModel)]="nuevaPelicula.titulo"
+required
+minlength="5"
+>
+<span style="color:grey" *ngIf="!titulo.valid">invalido</span>
+</p>
+
+<p>Director:
+<input
+type="text"
+#director="ngModel"
+name="director"
+[(ngModel)]="nuevaPelicula.director"
+required
+minlength="5"
+pattern="[A-Za-z]*"
+>
+<span style="color:grey" *ngIf="!director.valid">invalido</span>
+</p>
+<p>Anio:
+<input
+type="number"
+#fecha="ngModel"
+name="fecha"
+[(ngModel)]="nuevaPelicula.fecha"
+required
+pattern="[0-9]{4}"
+>
+<span style="color:grey" *ngIf="!fecha.valid">invalido</span>
+</p>
+<button
+type="submit"
+[disabled]="!unaForma.form.valid"
+>agrega pelicula</button>
 </form>
-
-

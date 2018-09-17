@@ -10,23 +10,22 @@ import {Router, ActivatedRoute} from '@angular/router';
   providers: [PeliculasServicio],
 })
 export class CrearPeliculaComponent implements OnInit {
-	public tituloPelicula = "";
-  public directorPelicula = "";
+  public tituloPelicula = '';
+  public directorPelicula = '';
   public fecha;
   public nuevaPelicula: Pelicula;
-	constructor(
-	private _unServicio: PeliculasServicio,
-	private _unRouter: Router,
-  private route: ActivatedRoute )
-	{}
+constructor(
+private _unServicio: PeliculasServicio,
+private _unRouter: Router,
+private route: ActivatedRoute ) {}
   unSubmit () {
     this._unServicio.insertarPelicula(this.nuevaPelicula);
     this._unRouter.navigate(['/']);
   }
-  ngOnInit():any {
+  ngOnInit(): any {
         // Recogemos los parametros de la URL
          this.route.params.subscribe(params => {
-            if(params['titulo']!=null){
+            if (params['titulo'] != null) {
                 this.tituloPelicula = params['titulo'];
             }
             this.directorPelicula = params['director'];

@@ -22,7 +22,7 @@ const routes: Routes = [
     component: CrearPeliculaComponent,
   },
   {
-    path: 'agregarpelicula/:titulo',
+    path: 'agregarpelicula/:titulo/:director/:fecha',
     component: CrearPeliculaComponent,
   },
   {
